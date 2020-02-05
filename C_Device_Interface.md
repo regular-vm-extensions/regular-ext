@@ -22,9 +22,6 @@ When a device is being removed from the system, the REGULAR-EXT implementation s
 In order for devices to provide any useful functionality, they must be able to interact with VM resources in some manner. This is achieved by calling a set of functions that operate of the the `rge_vm_interface` struct. All REGULAR-EXT implementations must provide a set of functions and types matching the declarations provided below. Implementations *may* provide additional functions as well.
 
 ```C
-#include <stddef.h>
-#include <stdint.h>
-
 struct rge_vm_interface_s;
 typedef struct rge_vm_interface_s rge_vm_interface;
 
@@ -43,4 +40,5 @@ void vmiWriteBytes(rge_vm_interface* vm, uint32_t dstAddr, uint8_t* data, size_t
 // Get the device ID of the calling device.
 uint32_t vmiDeviceId(rge_vm_interface* vm);
 ```
-
+## Notes
+In the code provided by this document, the types `uint32_t` and `size_t` are interpreted as the types defined the `stdint.h` and `stddef.h` headers respectively.
