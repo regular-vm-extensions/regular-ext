@@ -7,4 +7,4 @@ REGULAR-EXT supplements the REGULAR specification with the following additional 
 | Name  | Encoding      | Description                                                                                  |
 |-------|---------------|----------------------------------------------------------------------------------------------|
 | `hlt` | 0xff          | Halt execution.                                                                              |
-| `snd` | 0x?? rA rB rC | Send the command in rC to the device whose ID is stored in rB. The device *may* write to rA. | 
+| `snd` | 0xfd rA rB rC | Send the command in rC to the device whose ID is stored in rB. The device *may* write to rA. | 
